@@ -36,6 +36,7 @@ import java.util.Objects;
 public class login_Activity extends AppCompatActivity {
 
     TextView signInButton, forgotPassword;
+    TextView allInone;
     EditText username, Password, Type;
     Button login;
     Intent intent, SignInIntent, forGotIntent;
