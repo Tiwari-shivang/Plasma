@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:id="@+id/Home"
+        />
+    <item
+        android:title="Become Donor"
+        android:id="@+id/Donor"
+        />
+    <item
+        android:title="View Recipient Requests"
+        android:id="@+id/ViewRecipient"/>
+    <item
+        android:title="Donation Awareness"
+        android:id="@+id/Awareness"
+        />
+    <item
+        android:title="About Us"
+        android:id="@+id/AboutUs"
+        />
+</menu>

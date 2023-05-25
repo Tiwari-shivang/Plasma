@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "52219262292",
+    "project_id": "plasmadonate-c8334",
+    "storage_bucket": "plasmadonate-c8334.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52219262292:android:e8caae6bc899bf276644c1",
+        "android_client_info": {
+          "package_name": "com.example.plasma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52219262292-e1oli32f3fb8vq6qrtp1mf8np2pqve3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJdCXcgU15STWYHylDq_3mKI1Z8Nx1GZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52219262292-e1oli32f3fb8vq6qrtp1mf8np2pqve3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

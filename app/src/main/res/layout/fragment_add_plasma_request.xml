@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.addPlasmaRequest"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+        android:contentDescription="@string/enter_blood_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recipient"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/detailsImg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a plasma request"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/detailsImg"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/detailsText"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Patient Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/enterAgeLabel"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:inputType="text"
+            android:hint="eg: Shivang"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Phone no:"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:inputType="phone"
+            android:hint="eg. 9989816210"
+            android:id="@+id/phno"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Patient Age:"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:hint="eg. 26"
+            android:inputType="number"
+            android:id="@+id/age"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Requirements"
+            android:textStyle="bold"
+            android:layout_margin="10dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:hint="Enter requirements prescribed by your doctor"
+            android:id="@+id/require"
+            android:lines="3"
+            android:scrollbars="vertical"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_centerHorizontal="true"
+        android:text="Add" />
+
+</RelativeLayout>

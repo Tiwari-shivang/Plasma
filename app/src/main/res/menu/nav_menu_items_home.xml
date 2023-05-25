@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Who can?"
+        android:id="@+id/WhoCan"/>
+
+    <item android:title="How can?"
+        android:id="@+id/HowCan"/>
+
+    <item android:title="Where can?"
+        android:id="@+id/WhereCan"/>
+
+    <item android:title="Why?"
+        android:id="@+id/WhyCan"/>
+
+</menu>

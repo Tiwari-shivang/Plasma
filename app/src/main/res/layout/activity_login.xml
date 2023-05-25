@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_Activity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/account"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LoginImg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/LoginText"
+        android:layout_below="@id/LoginImg"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:id="@+id/credentials"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_margin="10dp"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress"
+            android:id="@+id/username"
+            android:drawableStart="@drawable/email_edit_text"
+            android:drawablePadding="5dp"
+            android:layout_below="@id/LoginText"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_margin="10dp"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            android:drawableStart="@drawable/lock_edit_text"
+            android:drawablePadding="5dp"
+
+            android:layout_below="@id/LoginText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Type:"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/typeGroup"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hospital"
+                android:id="@+id/typeHospital"
+                android:layout_margin="5dp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donor"
+                android:id="@+id/typeDonor"
+                android:layout_margin="5dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipient"
+                android:id="@+id/typeRecipient"
+                android:layout_margin="5dp"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credentials"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Login" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loginButton"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:id="@+id/forgotPass"
+            android:textColor="#03A9F4"
+            />
+        <TextView
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="or Sign up?" />
+    </LinearLayout>
+
+</RelativeLayout>

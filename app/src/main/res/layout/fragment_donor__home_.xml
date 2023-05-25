@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Donor_Home_Frag"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heyy! lets become a responsible citizen"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:id="@+id/message"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/message"
+                android:text="Welcome"
+                android:id="@+id/WelcomeHome"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="Patients all over the world rely on plasma protein therapies to treat rare, chronic diseases. These individuals rely on the generosity and commitment of plasma donors. You may donate plasma in one of more than 1,000 licensed and certified plasma collection centers located in North America and Europe."
+                android:lineHeight="30sp"
+                android:layout_below="@id/WelcomeHome"
+                android:layout_margin="10dp"
+                android:id="@+id/firstPara"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gift"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/firstPara"
+                android:id="@+id/Gift"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="Plasma often is referred to as the gift of life because it is the essential starting material needed to manufacture therapies that help thousands of people worldwide with rare, chronic diseases to live healthier, productive and fulfilling lives."
+                android:layout_below="@id/Gift"
+                android:layout_margin="10dp"
+                android:lineHeight="30sp"
+                android:id="@+id/SecondPara"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/need_of_plasma"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/SecondPara"
+                android:layout_margin="10dp"
+                android:id="@+id/CovidImg"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="The need for plasma and plasma donors is more urgent than ever before. Visit Donation center page to learn more and to find a donation center near you."
+                android:layout_below="@id/CovidImg"
+                android:layout_margin="10dp"
+                android:lineHeight="30sp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

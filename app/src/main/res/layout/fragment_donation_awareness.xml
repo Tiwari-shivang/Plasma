@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DonationAwareness"
+    android:background="@color/white">
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="Plasma is necessary"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:id="@+id/plasmaNecessary"/>
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="1. need of awareness"
+                android:layout_margin="5dp"
+                android:id="@+id/firstPoint"
+                android:textStyle="bold"
+                android:layout_below="@id/plasmaNecessary"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Raise global awareness about source plasma collection"
+                android:id="@+id/FirstSubPointFrst"
+                android:layout_below="@id/firstPoint"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Recognize the contributions of plasma donors to saving and improving lives"
+                android:id="@+id/FirstSubPointSeco"
+                android:layout_below="@id/FirstSubPointFrst"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Increase understanding about lifesaving plasma protein therapies and rare diseases."
+                android:id="@+id/FirstSubPointThree"
+                android:layout_below="@id/FirstSubPointSeco"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— People with bleeding disorders are unable to clot blood properly. As a result a minor injury may result in internal bleeding, organ damage and even death."
+                android:id="@+id/FirstSubPointFour"
+                android:layout_below="@id/FirstSubPointThree"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Albumin is used to treat burns, trauma patients and surgical patients."
+                android:id="@+id/FirstSubPointFive"
+                android:layout_below="@id/FirstSubPointFour"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— These are used to treat rabies, tetanus, dialysis patients and organ transplant recipients."
+                android:id="@+id/FirstSubPointSix"
+                android:layout_below="@id/FirstSubPointFive"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <!-- /////////////////////////////////////// -->
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="2. Ways to Spread Awareness"
+                android:layout_below="@id/FirstSubPointSix"
+                android:layout_margin="5dp"
+                android:id="@+id/SecondPoint"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="There are many ways that you can help:"
+                android:layout_below="@id/SecondPoint"
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:id="@+id/ManyWays"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Visit a plasma collection center open house. Locate a plasma collection facility near you."
+                android:id="@+id/SecondPointSubFirst"
+                android:layout_below="@id/ManyWays"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+
+            <TextView
+                android:id="@+id/SecondPointSubSecond"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/SecondPointSubFirst"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="— Write a letter to your local media telling them about the importance of plasma collection and plasma protein therapies."
+                android:textSize="15sp" />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— If you are a donor — share what it means to you to save and improve lives"
+                android:id="@+id/SecondPointSubThird"
+                android:layout_below="@id/SecondPointSubSecond"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— If you are a patient — share how these therapies have impacted your life"
+                android:id="@+id/SecondPointSubFourth"
+                android:layout_below="@id/SecondPointSubThird"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— If you are a donor — share what it means to you to save and improve lives"
+                android:id="@+id/SecondPointSubFifth"
+                android:layout_below="@id/SecondPointSubFourth"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— If you are a donor — share what it means to you to save and improve lives"
+                android:id="@+id/SecondPointSubSixth"
+                android:layout_below="@id/SecondPointSubFifth"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— If you are a donor — share what it means to you to save and improve lives"
+                android:id="@+id/SecondPointSubSeventh"
+                android:layout_below="@id/SecondPointSubSixth"
+                android:textSize="15sp"
+                android:layout_margin="15dp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#D9F0FA"
+                android:layout_below="@id/SecondPointSubSeventh"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    >
+
+                    <TextView
+                        style="@style/textViewIngancer"
+                        android:text="Created By:"
+                        android:textStyle="bold"
+                        android:id="@+id/CreatedBy"
+                        />
+                    <TextView
+                        style="@style/textViewIngancer"
+                        android:text="— Shivang Tiwari."
+                        android:id="@+id/Shivang"
+                        android:textSize="15sp"
+                        android:layout_below="@id/CreatedBy"
+                        />
+
+                    <TextView
+                        style="@style/textViewIngancer"
+                        android:text="— Kriti Vashishta."
+                        android:id="@+id/Kriti"
+                        android:textSize="15sp"
+                        android:layout_below="@id/Shivang"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

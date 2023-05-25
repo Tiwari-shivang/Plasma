@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ActWithHomeFrags.WhyPageFrag"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/Description1"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:text="Quite simply, plasma donors are needed because lives depend on plasma protein therapies. Donating plasma is often called, 'the gift of life.' "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Description2"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Description1"
+                android:text="Only a small number of people living in the U.S. who are eligible to donate blood or source plasma actually donate. The plasma protein therapeutics industry supports donation in all of its forms, so that donors may contribute live-saving blood and source plasma to those in need. "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Description3"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Description2"
+                android:text="Source plasma donation and blood donation are critically important activities that contribute to saving lives. For many with rare diseases, these are the only therapies available to treat these chronic conditions. Your plasma will be used to create therapies that treat a variety of conditions and diseases. Below is a brief description of the types of plasma protein therapies that are manufactured from source plasma and the types of conditions they are used to treat."
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A1A0A0"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Description3"
+                android:id="@+id/partitionOne"
+                />
+
+            <!-- ///////////////////////////////////////// -->
+
+            <TextView
+                android:id="@+id/whatIsUsedFor"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/partitionOne"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="What is your plasma used for?"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ClotingFacotrs"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/whatIsUsedFor"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Clotting Factors"
+                android:textStyle="bold" />
+            <TextView
+            android:id="@+id/ClotingDesc"
+            style="@style/textViewIngancer"
+            android:layout_margin="10dp"
+            android:layout_below="@id/ClotingFacotrs"
+            android:text="— People with bleeding disorders are unable to clot blood properly. As a result a minor injury may result in internal bleeding, organ damage and even death."
+            android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Immunoglobulin"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/ClotingDesc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Immunoglobulin or IVIG"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/ImmunoglobulinDesc"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Immunoglobulin"
+                android:text="— There are more than 150 primary immune deficiency disorders (PID). These individuals have improperly functioning immune systems and do not respond to traditional antibiotics. Without IVIG, they are exposed to frequent and often serious infections."
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Alpha"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/ImmunoglobulinDesc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Alpha-1 Antitrypsin"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/AlphaDesc"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Alpha"
+                android:text="— Alpha-1 is more commonly known as genetic emphysema. It is a heredity condition that may result in serious lung disease in adults and lung and/or liver disease in both children and adults."
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Albumin"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/AlphaDesc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Albumin"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/AlbuminDesc"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Albumin"
+                android:text="— Albumin is used to treat burns, trauma patients and surgical patients."
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Hyperimmuneglobulins"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/AlbuminDesc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Hyperimmuneglobulins"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/HyperimmuneglobulinsDesc"
+                style="@style/textViewIngancer"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Hyperimmuneglobulins"
+                android:text="— These are used to treat rabies, tetanus, dialysis patients and organ transplant recipients. They are also used to treat pregnant women who have Rh incompatibility, a condition where the mother and fetus have incompatible blood that can lead to serious injury to the unborn child or even death."
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

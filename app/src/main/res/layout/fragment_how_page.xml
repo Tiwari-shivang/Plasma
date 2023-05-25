@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ActWithHomeFrags.HowPageFrag"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="Once you enter the donation center"
+                android:layout_margin="10dp"
+                android:id="@+id/onceEnterDonation"
+                android:textStyle="bold"/>
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— A receptionist will greet you and check your I.D. If it is your first visit, you will receive a physical examination."
+                android:id="@+id/onceEnterFirst"
+                android:layout_margin="15dp"
+                android:layout_below="@id/onceEnterDonation"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— A center technician will take a small blood sample from your finger to check your protein and hematocrit levels."
+                android:id="@+id/onceEnterSeco"
+                android:layout_margin="15dp"
+                android:layout_below="@id/onceEnterFirst"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Complete a Donor History Questionnaire."
+                android:id="@+id/onceEnterThree"
+                android:layout_margin="15dp"
+                android:layout_below="@id/onceEnterSeco"
+                android:textSize="15sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A1A0A0"
+                android:layout_margin="10dp"
+                android:layout_below="@id/onceEnterThree"
+                android:id="@+id/partitionOne"
+                />
+            <!-- ///////////////////////////////////////////////////////////////////////////// -->
+
+
+            <TextView
+                android:id="@+id/fitToDonate"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/partitionOne"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="If the center staff determines that you are eligible to donate plasma, you will be taken to the donation area and seated in a comfortable seating bed."
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— A technician will prepare your arm with antiseptic, insert the needle, and begin the donation process."
+                android:id="@+id/FitFirst"
+                android:layout_margin="15dp"
+                android:layout_below="@id/fitToDonate"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="— Blood will be drawn, plasma will be separated from your blood, and red blood cells will be returned to your body through a process called plasmapheresis."
+                android:id="@+id/FitSeco"
+                android:layout_margin="15dp"
+                android:layout_below="@id/FitFirst"
+                android:textSize="15sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A1A0A0"
+                android:layout_margin="10dp"
+                android:layout_below="@id/FitSeco"
+                android:id="@+id/partitionTwo"
+                />
+
+            <!-- /////////////////////////////////////////////////////////////////// -->
+
+            <TextView
+                android:id="@+id/Description"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/partitionTwo"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Your first donation will take approximately 2 hours. Return visits on average take about 90 minutes. When you are finished, you will check out and receive compensation to thank you for your time. The amount of compensation is determined by each plasma collection facility. A staff member at the plasma center will be available to answer any questions you may have."
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A1A0A0"
+                android:layout_margin="10dp"
+                android:layout_below="@id/Description"
+                android:id="@+id/partitionThree"
+                />
+            <TextView
+                android:id="@+id/lastHeading"
+                style="@style/textViewIngancer"
+                android:layout_below="@id/partitionThree"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Your Personal Health and Safety"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/textViewIngancer"
+                android:text="Your safety and health are of utmost importance. All equipment and materials are sterile and for one-time use only. Center staff receives ongoing training to provide a safe and pleasant experience. Plasma donation is strictly regulated by government authorities. In addition, companies adhere to voluntary standards through International Quality Plasma Program certification. Centers are inspected and certified by independent auditors and adhere to regulatory reporting requirements."
+                android:id="@+id/Description2"
+                android:layout_margin="15dp"
+                android:layout_below="@id/lastHeading"
+                android:textSize="15sp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

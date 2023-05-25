@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WhyFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/WhyCard"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#DFF3FB"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="Why ?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/WhyCardText"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_forward_light"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back_light"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/WhyDonateImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WhyCardText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/why_to_donate" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn more about how you can save and improve lives"
+                android:layout_below="@id/WhyDonateImg"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:id="@+id/WhyDonateID"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read More"
+                android:id="@+id/ReadMoreWhy"
+                android:layout_below="@id/WhyDonateID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

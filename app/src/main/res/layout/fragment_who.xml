@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/whoCard"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#DFF3FB"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="Who ?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/WhoCardText"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_forward_light"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/who_can_donate"
+                android:layout_below="@id/WhoCardText"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:id="@+id/WhoCanDonateImg"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn more about become a qualified donor"
+                android:layout_below="@id/WhoCanDonateImg"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:id="@+id/WhoCanDonateID"
+                />
+
+            <Button
+                android:id="@+id/ReadMoreWho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WhoCanDonateID"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="Read More" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

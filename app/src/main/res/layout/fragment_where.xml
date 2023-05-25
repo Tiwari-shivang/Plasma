@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WhereFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/WhereCard"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#DFF3FB"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="Where ?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/WhereCardText"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back_light"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/where_to_donate"
+                android:layout_below="@id/WhereCardText"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:id="@+id/WhereDonateImg"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn more about how you can save and improve lives"
+                android:layout_below="@id/WhereDonateImg"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:id="@+id/WhereDonateID"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read More"
+                android:id="@+id/ReadMoreWhere"
+                android:layout_below="@id/WhereDonateID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
