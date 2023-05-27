@@ -12,6 +12,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.plasma.Fragments.Recipient_Home_Frag;
 import com.example.plasma.Fragments.addPlasmaRequest;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -48,6 +50,10 @@ public class RecipientHomePage extends AppCompatActivity {
                 { loadFragment(new view_all_donors()); }
                 else if (id == R.id.Recipient)
                 { loadFragment(new addPlasmaRequest());}
+                else if (id == R.id.hospital){
+                    Intent hospitalIntent = new Intent(RecipientHomePage.this, HospitalsLocation.class);
+                    startActivity(hospitalIntent);
+                }
                 else
                 {  }
                 drawerLayout.closeDrawer(GravityCompat.START);

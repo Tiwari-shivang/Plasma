@@ -91,7 +91,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hospital"
+                android:text="Hospital"
                 android:id="@+id/typeHospital"
                 android:layout_margin="5dp"
                 />

@@ -15,6 +15,8 @@ import android.view.MenuItem;
 
 import com.example.plasma.Fragments.Recipient_Home_Frag;
 import com.example.plasma.Fragments.addPlasmaRequest;
+import com.example.plasma.Fragments.add_new_hospital;
+import com.example.plasma.Fragments.become_Donor;
 import com.example.plasma.Fragments.view_all_donors;
 import com.example.plasma.Fragments.view_all_recipient;
 import com.google.android.material.navigation.NavigationView;
@@ -35,7 +37,7 @@ public class HospitalActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        loadFragment(new addPlasmaRequest());
+        loadFragment(new view_all_recipient());
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -47,8 +49,12 @@ public class HospitalActivity extends AppCompatActivity {
                 { loadFragment(new view_all_donors()); }
                 else if (id == R.id.addRequest)
                 { loadFragment(new addPlasmaRequest());}
-                else
-                {  }
+                else if (id == R.id.address){
+                    loadFragment(new add_new_hospital());
+                }
+                else{
+                    loadFragment(new become_Donor());
+                }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }

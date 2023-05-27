@@ -79,7 +79,7 @@ public class SignIn extends AppCompatActivity {
                     intent = new Intent(SignIn.this, RecipientHomePage.class);
                 }
                 else{
-                    intent = new Intent(SignIn.this, HospitalHomePage.class);
+                    intent = new Intent(SignIn.this, HospitalActivity.class);
                 }
                 createUser.createUserWithEmailAndPassword(emailTextBox.getText().toString(), passwordTextBox.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

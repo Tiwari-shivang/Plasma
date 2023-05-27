@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Add Hospital"
+        android:id="@+id/address"/>
+
     <item android:title="View all donors"
         android:id="@+id/allDonors"/>
 
     <item android:title="View all Recipient"
         android:id="@+id/allRecipient"/>
 
-    <item android:title="Add a plasma request"
+    <item android:title="Add a Recipient request"
         android:id="@+id/addRequest"/>
+    <item android:title="Add a Donor Request"
+        android:id="@+id/addDonorRequest"/>
 
-    <item android:title="About us"
-        android:id="@+id/about"/>
 </menu>

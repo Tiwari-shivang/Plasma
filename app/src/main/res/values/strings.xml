@@ -46,4 +46,5 @@
     <string name="enter_longitude">Enter Longitude</string>
     <string name="submit">submit</string>
     <string name="cancel">cancel</string>
+    <string name="title_activity_hospitals_location">HospitalsLocation</string>
 </resources>

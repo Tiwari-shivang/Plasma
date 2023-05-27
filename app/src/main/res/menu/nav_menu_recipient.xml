@@ -13,6 +13,10 @@
         android:id="@+id/ViewDonor"/>
 
     <item
+        android:title="View Hospitals"
+        android:id="@+id/hospital"/>
+
+    <item
         android:title="About Us"
         android:id="@+id/AboutUs"
         />
