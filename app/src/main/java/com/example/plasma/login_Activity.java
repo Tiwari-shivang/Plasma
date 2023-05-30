@@ -93,12 +93,18 @@ public class login_Activity extends AppCompatActivity {
                                                             Toast.makeText(login_Activity.this, "Logged in", Toast.LENGTH_SHORT).show();
                                                             if (radioButton.getText().toString().equals("Donors")){
                                                                 intent = new Intent(login_Activity.this, DonorsHomePage.class);
+                                                                intent.putExtra("fragment", "view_recipient");
+                                                                intent.putExtra("currentActivity", "Donor");
                                                             }
                                                             else if (radioButton.getText().toString().equals("Recipient")){
                                                                 intent = new Intent(login_Activity.this, RecipientHomePage.class);
+                                                                intent.putExtra("fragment", "addPlasmaRequest");
+                                                                intent.putExtra("currentActivity", "Recipient");
                                                             }
                                                             else {
                                                                 intent = new Intent(login_Activity.this, HospitalActivity.class);
+                                                                intent.putExtra("fragment", "becomeDonor");
+                                                                intent.putExtra("currentActivity", "Hospital");
                                                             }
                                                             startActivity(intent);
                                                         }

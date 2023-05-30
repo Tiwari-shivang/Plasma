@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -20,6 +21,8 @@ import com.example.plasma.Fragments.become_Donor;
 import com.example.plasma.Fragments.view_all_donors;
 import com.example.plasma.Fragments.view_all_recipient;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Objects;
 
 public class HospitalActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -37,7 +40,22 @@ public class HospitalActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        loadFragment(new view_all_recipient());
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Hospital");
+
+        // getting intent fragment
+        Intent initialIntent = getIntent();
+        if (initialIntent.getStringExtra("fragment").equals("view_recipient")){
+            loadDefaultFragment(new view_all_recipient());
+        }
+        else if (initialIntent.getStringExtra("fragment").equals("view_donors")){
+            loadDefaultFragment(new view_all_donors());
+        }
+        else if (initialIntent.getStringExtra("fragment").equals("becomeDonor")){
+            loadDefaultFragment(new become_Donor());
+        }
+        else{
+            loadDefaultFragment(new addPlasmaRequest());
+        }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -66,6 +84,12 @@ public class HospitalActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.sideNavMenuFrameLayout,aFragment, "FragTag");
         ft.addToBackStack(null);
+        ft.commit();
+    }
+    private void loadDefaultFragment(Fragment aFragment) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.sideNavMenuFrameLayout,aFragment, "FragTag");
         ft.commit();
     }
 }

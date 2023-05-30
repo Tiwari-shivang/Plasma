@@ -10,12 +10,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.plasma.Fragments.DonationAwareness;
 import com.example.plasma.Fragments.Donor_Home_Frag;
 import com.example.plasma.Fragments.become_Donor;
+import com.example.plasma.Fragments.viewRecipientDonorFrag;
 import com.example.plasma.Fragments.view_all_recipient;
 import com.google.android.material.navigation.NavigationView;
 
@@ -39,7 +41,16 @@ public class DonorsHomePage extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        loadFragment(new Donor_Home_Frag());
+        Intent initialIntent = getIntent();
+
+        //load default fragment
+        if (initialIntent.getStringExtra("fragment").equals("view_recipient")){
+            loadDefaultFragment(new viewRecipientDonorFrag());
+        }
+        else{
+            loadDefaultFragment(new Donor_Home_Frag());
+        }
+
         Objects.requireNonNull(getSupportActionBar()).setTitle("Donor");
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -48,10 +59,13 @@ public class DonorsHomePage extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.Home)
                 { loadFragment(new Donor_Home_Frag()); }
-                else if (id == R.id.Donor)
-                { loadFragment(new become_Donor()); }
+                else if (id == R.id.hospitals)
+                {
+                    Intent allHospital_intent = new Intent(DonorsHomePage.this, allHospitalsDonor.class);
+                    startActivity(allHospital_intent);
+                }
                 else if (id == R.id.ViewRecipient)
-                { loadFragment(new view_all_recipient());}
+                { loadFragment(new viewRecipientDonorFrag());}
                 else if (id == R.id.Awareness)
                 { loadFragment(new DonationAwareness()); }
                 else
@@ -67,6 +81,12 @@ public class DonorsHomePage extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.sideNavMenuFrameLayout,aFragment, "FragTag");
         ft.addToBackStack(null);
+        ft.commit();
+    }
+    private void loadDefaultFragment(Fragment aFragment) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.sideNavMenuFrameLayout,aFragment, "FragTag");
         ft.commit();
     }
 }

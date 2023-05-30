@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.view_all_donors"
-    android:background="@color/white"
-    android:id="@+id/mainView"
+    tools:context=".Fragments.viewRecipientDonorFrag"
     android:padding="10dp">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/headingAllDonors"
+        android:id="@+id/heading"
         >
 
         <TextView
-            android:id="@+id/donorsLabel"
+            android:id="@+id/allRecipientLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="All donors"
+            android:text="All Recipient"
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/hospitalSelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:id="@+id/selectHosClicked"
-            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
             android:text="Select Hospital" />
     </RelativeLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerDonors"
-        android:layout_below="@id/headingAllDonors"
-        />
+        android:layout_below="@+id/heading"
+        android:id="@+id/recyclerViewRecipient"/>
 
 </RelativeLayout>

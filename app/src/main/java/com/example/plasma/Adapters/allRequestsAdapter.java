@@ -38,6 +38,7 @@ public class allRequestsAdapter extends RecyclerView.Adapter<allRequestsAdapter.
         holder.BMI.setText(array.get(position).BMI);
         holder.BMR.setText(array.get(position).BMR);
         holder.Gender.setText(array.get(position).Gender);
+        holder.hospitalName.setText(array.get(position).hospitalName);
     }
 
     @Override
@@ -45,7 +46,7 @@ public class allRequestsAdapter extends RecyclerView.Adapter<allRequestsAdapter.
         return array.size();
     }
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView Age, Gender, BMI, BMR, Address, BloodGroup, Mobile, Weight;
+        TextView Age, Gender, BMI, BMR, Address, BloodGroup, Mobile, Weight, hospitalName;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             Age = itemView.findViewById(R.id.Age);
@@ -56,6 +57,7 @@ public class allRequestsAdapter extends RecyclerView.Adapter<allRequestsAdapter.
             BloodGroup = itemView.findViewById(R.id.BloodGroup);
             Mobile = itemView.findViewById(R.id.Mobile);
             Weight = itemView.findViewById(R.id.Weight);
+            hospitalName = itemView.findViewById(R.id.hospitalFirebase);
         }
     }
 }

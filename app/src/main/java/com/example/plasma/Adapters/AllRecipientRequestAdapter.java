@@ -36,7 +36,9 @@ public class AllRecipientRequestAdapter extends RecyclerView.Adapter<AllRecipien
         holder.Name.setText(arrayList.get(position).patientName);
         holder.Age.setText(arrayList.get(position).age);
         holder.PhoneNumber.setText(arrayList.get(position).phno);
+        holder.hospitalName.setText(arrayList.get(position).hospitalName);
         holder.requirements.setText(arrayList.get(position).requirements);
+
         holder.clickIt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +57,7 @@ public class AllRecipientRequestAdapter extends RecyclerView.Adapter<AllRecipien
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView Name, PhoneNumber, Age, requirements;
+        TextView Name, PhoneNumber, Age, requirements, hospitalName;
         Button clickIt;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,6 +65,7 @@ public class AllRecipientRequestAdapter extends RecyclerView.Adapter<AllRecipien
             PhoneNumber = itemView.findViewById(R.id.PhoneNumber);
             Age = itemView.findViewById(R.id.Age);
             requirements = itemView.findViewById(R.id.requirementValue);
+            hospitalName = itemView.findViewById(R.id.hospitalName);
             clickIt = itemView.findViewById(R.id.viewdescriptionClick);
         }
     }

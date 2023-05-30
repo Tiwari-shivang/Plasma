@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.plasma.Adapters.allRequestsAdapter;
 import com.example.plasma.Adapters.hospitalNameAdapter;
 import com.example.plasma.R;
 import com.example.plasma.Structure.Request;
@@ -29,13 +28,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.plasma.Adapters.allRequestsAdapter;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 
-public class view_all_donors extends Fragment {
+import java.util.ArrayList;
+import java.util.Objects;
+
+public class viewDonorRecipientFrag extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Request> arrayList;
@@ -47,26 +44,24 @@ public class view_all_donors extends Fragment {
     TextView hospitalName;
     String selectedHospital;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup allDonors = (ViewGroup) inflater.inflate(R.layout.fragment_view_all_donors, container, false);
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_view_donor_recipient, container, false);
 
         //binding with UI
-        recyclerView = allDonors.findViewById(R.id.recyclerDonors);
-        mainView = allDonors.findViewById(R.id.mainView);
-        selectHosClicked = allDonors.findViewById(R.id.selectHosClicked);
+        recyclerView = viewGroup.findViewById(R.id.recyclerDonors);
+        mainView = viewGroup.findViewById(R.id.mainView);
+        hospitalName = viewGroup.findViewById(R.id.donorsLabel);
+        selectHosClicked = viewGroup.findViewById(R.id.selectHosClicked);
+        selectedHospital = "";
         request = new Request("", "", "", "", "", "", "", "", "");
         arrayList = new ArrayList<>();
-        hospitalName = allDonors.findViewById(R.id.donorsLabel);
-        selectedHospital = "";
 
-        if (requireActivity().getIntent().hasExtra("HospitalName")){
+        if (requireActivity().getIntent().hasExtra("HospitalNameDonorHome")){
             hospitalName.setText(requireActivity().getIntent().getStringExtra("HospitalNameDonorHome"));
             Toast.makeText(getActivity(), "Hospital selected: "+requireActivity().getIntent().getStringExtra("HospitalName"), Toast.LENGTH_SHORT).show();
         }
-
         selectedHospital = hospitalName.getText().toString();
 
         // connection with firebase
@@ -95,7 +90,7 @@ public class view_all_donors extends Fragment {
                         }
                         else Weight = Objects.requireNonNull(snapshot2.getValue()).toString();
                     }
-                    if (selectedHospital.equals("All donors")){
+                    if (selectedHospital.equals("All donors:")){
                         arrayList.add(new Request(Age, Gender, Weight, BMI, BMR, BloodGroup, Address, Mobile, hospitalName));
                     }
                     else{
@@ -116,17 +111,19 @@ public class view_all_donors extends Fragment {
 
             }
         });
+
         selectHosClicked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //get all hospital list from allHospital activity for Hospital home page.
-                Intent intent = new Intent(getActivity(), allHospitals.class);
+                Intent intent = new Intent(getActivity(), allHospitalsRecipient.class);
                 intent.putExtra("fragment", "view_donors");
                 startActivity(intent);
                 requireActivity().finish();
             }
         });
-        return allDonors;
+
+        return viewGroup;
     }
 }

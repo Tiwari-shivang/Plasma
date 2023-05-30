@@ -84,8 +84,30 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/requirement"
+                android:id="@+id/hospital"
                 android:layout_below="@id/ageLinear"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital name: "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hospitalName"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:text="temp"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/requirement"
+                android:layout_below="@id/hospital"
                 >
                 <TextView
                     android:layout_width="wrap_content"

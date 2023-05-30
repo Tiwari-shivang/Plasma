@@ -8,18 +8,31 @@
     android:padding="10dp"
     android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All Recipient"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:id="@+id/allRecipientLabel"
-        />
+        android:id="@+id/heading"
+        >
+
+        <TextView
+            android:id="@+id/allRecipientLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="All Recipient"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/hospitalSelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Select Hospital" />
+    </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/allRecipientLabel"
+        android:layout_below="@+id/heading"
         android:id="@+id/recyclerViewRecipient"/>
 
 </RelativeLayout>

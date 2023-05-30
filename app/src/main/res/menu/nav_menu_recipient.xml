@@ -4,10 +4,7 @@
         android:title="Home"
         android:id="@+id/Home"
         />
-    <item
-        android:title="Add a plasma Request"
-        android:id="@+id/Recipient"
-        />
+
     <item
         android:title="View Donors"
         android:id="@+id/ViewDonor"/>
@@ -15,6 +12,9 @@
     <item
         android:title="View Hospitals"
         android:id="@+id/hospital"/>
+    <item
+        android:id="@+id/registeredHospitals"
+        android:title="View registered Hospitals"/>
 
     <item
         android:title="About Us"

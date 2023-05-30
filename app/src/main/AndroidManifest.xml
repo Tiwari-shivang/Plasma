@@ -16,7 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Plasma"
         tools:targetApi="31">
-
+        <activity
+            android:name=".allHospitalsRecipient"
+            android:exported="false" />
+        <activity
+            android:name=".allHospitalsDonor"
+            android:exported="false" />
+        <activity
+            android:name=".allHospitals"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

@@ -54,6 +54,7 @@ public class add_new_hospital extends Fragment {
                     return;
                 }
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("HospitalLocations");
+                DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference("HospitalNames");
                 hospitalAddress address = new hospitalAddress(latitude.getText().toString(), longitude.getText().toString(), hospitalName.getText().toString());
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -92,6 +93,7 @@ public class add_new_hospital extends Fragment {
                     return;
                 }
                 databaseReference.push().setValue(address);
+                databaseReference1.push().setValue(hospitalName.getText().toString());
             }
         });
         return addHospital;

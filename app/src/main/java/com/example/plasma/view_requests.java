@@ -39,67 +39,67 @@ public class view_requests extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        recyclerView = findViewById(R.id.recyclerRequests);
-        ArrayList<Request> reqArr = new ArrayList<>();
-        reqArr.add(new Request("20", "male", "34","20.1", "20.1", "A+", "101", "9910"));
-//        allRequestsAdapter all = new allRequestsAdapter(reqArr, this);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-//        recyclerView.setAdapter(all);
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Request");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                ArrayList<Request> arr = new ArrayList<>();
-                for (DataSnapshot snapshot1:snapshot.getChildren()){
-                    String Age="", Gender="", Weight="", BMI="", BMR="", BloodGroup="", Address="", Mobile="";
-                    for (DataSnapshot snapshot2: snapshot1.getChildren()){
-                        if (Objects.equals(snapshot2.getKey(), "Age")){
-                            Age = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+Age, Toast.LENGTH_SHORT).show();
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "Gender")){
-                            Gender = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+Gender, Toast.LENGTH_SHORT).show();
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "Weight")){
-                            Weight = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+Weight, Toast.LENGTH_SHORT).show();
-
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "BMI")){
-                            BMI = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+BMI, Toast.LENGTH_SHORT).show();
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "BMR")){
-                            BMR = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+BMR, Toast.LENGTH_SHORT).show();
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "BloodGroup")){
-                            BloodGroup = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+BloodGroup, Toast.LENGTH_SHORT).show();
-                        }
-                        else if (Objects.equals(snapshot2.getKey(), "Address")){
-                            Address = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+Address, Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Mobile = Objects.requireNonNull(snapshot2.getValue()).toString();
-                            Toast.makeText(view_requests.this, ""+Mobile, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    Request request = new Request(Age, Gender, Weight, BMI, BMR, BloodGroup, Address, Mobile );
-                    arr.add(request);
-                }
-
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+//        recyclerView = findViewById(R.id.recyclerRequests);
+//        ArrayList<Request> reqArr = new ArrayList<>();
+//        reqArr.add(new Request("20", "male", "34","20.1", "20.1", "A+", "101", "9910"));
+////        allRequestsAdapter all = new allRequestsAdapter(reqArr, this);
+////        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+////        recyclerView.setAdapter(all);
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Request");
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                ArrayList<Request> arr = new ArrayList<>();
+//                for (DataSnapshot snapshot1:snapshot.getChildren()){
+//                    String Age="", Gender="", Weight="", BMI="", BMR="", BloodGroup="", Address="", Mobile="";
+//                    for (DataSnapshot snapshot2: snapshot1.getChildren()){
+//                        if (Objects.equals(snapshot2.getKey(), "Age")){
+//                            Age = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+Age, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "Gender")){
+//                            Gender = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+Gender, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "Weight")){
+//                            Weight = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+Weight, Toast.LENGTH_SHORT).show();
+//
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "BMI")){
+//                            BMI = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+BMI, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "BMR")){
+//                            BMR = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+BMR, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "BloodGroup")){
+//                            BloodGroup = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+BloodGroup, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else if (Objects.equals(snapshot2.getKey(), "Address")){
+//                            Address = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+Address, Toast.LENGTH_SHORT).show();
+//                        }
+//                        else{
+//                            Mobile = Objects.requireNonNull(snapshot2.getValue()).toString();
+//                            Toast.makeText(view_requests.this, ""+Mobile, Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                    Request request = new Request(Age, Gender, Weight, BMI, BMR, BloodGroup, Address, Mobile );
+//                    arr.add(request);
+//                }
+//
+//
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
     }
 }

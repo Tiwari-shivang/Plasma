@@ -17,6 +17,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.plasma.Fragments.viewDonorRecipientFrag;
+import com.example.plasma.Fragments.viewRecipientDonorFrag;
 import com.example.plasma.Fragments.view_all_donors;
 import com.google.android.material.navigation.NavigationView;
 import java.util.Objects;
@@ -30,6 +32,7 @@ public class RecipientHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipient_home_page);
 
+        //binding with UI
         toolbar = findViewById(R.id.toolBar);
         drawerLayout = findViewById(R.id.Drawer_layout);
         navigationView = findViewById(R.id.NavigationDrawer);
@@ -37,7 +40,10 @@ public class RecipientHomePage extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        loadFragment(new addPlasmaRequest());
+
+        // getting intent fragment
+        Intent initialIntent = getIntent();
+        setDefaultFragment(new viewDonorRecipientFrag());
         Objects.requireNonNull(getSupportActionBar()).setTitle("Recipient");
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -47,12 +53,14 @@ public class RecipientHomePage extends AppCompatActivity {
                 if (id == R.id.Home)
                 { loadFragment(new Recipient_Home_Frag()); }
                 else if (id == R.id.ViewDonor)
-                { loadFragment(new view_all_donors()); }
-                else if (id == R.id.Recipient)
-                { loadFragment(new addPlasmaRequest());}
+                { loadFragment(new viewDonorRecipientFrag()); }
                 else if (id == R.id.hospital){
                     Intent hospitalIntent = new Intent(RecipientHomePage.this, HospitalsLocation.class);
                     startActivity(hospitalIntent);
+                }
+                else if (id == R.id.registeredHospitals){
+                    Intent regHospitalIntent = new Intent(RecipientHomePage.this, allHospitalsRecipient.class);
+                    startActivity(regHospitalIntent);
                 }
                 else
                 {  }
@@ -66,6 +74,12 @@ public class RecipientHomePage extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.sideNavMenuFrameLayout,aFragment, "FragTag");
         ft.addToBackStack(null);
+        ft.commit();
+    }
+    private void setDefaultFragment (Fragment aFragment){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.sideNavMenuFrameLayout,aFragment);
         ft.commit();
     }
 }

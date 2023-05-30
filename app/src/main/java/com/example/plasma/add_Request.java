@@ -37,13 +37,13 @@ public class add_Request extends AppCompatActivity {
         BMR = findViewById(R.id.BMRtextField);
         BloodGroup = findViewById(R.id.BloodGrptxt);
         addRequest = findViewById(R.id.AddRequest);
-        addRequest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Request request = new Request(Age.getText().toString(), Gender.getText().toString(), Weight.getText().toString(), BMI.getText().toString(), BMR.getText().toString(), BloodGroup.getText().toString(), Address.getText().toString(), Mobile.getText().toString());
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DonationRequests");
-                databaseReference.push().setValue(request);
-            }
-        });
+//        addRequest.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Request request = new Request(Age.getText().toString(), Gender.getText().toString(), Weight.getText().toString(), BMI.getText().toString(), BMR.getText().toString(), BloodGroup.getText().toString(), Address.getText().toString(), Mobile.getText().toString());
+//                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DonationRequests");
+//                databaseReference.push().setValue(request);
+//            }
+//        });
     }
 }

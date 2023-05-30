@@ -5,8 +5,8 @@
         android:id="@+id/Home"
         />
     <item
-        android:title="Become Donor"
-        android:id="@+id/Donor"
+        android:title="View Registered Hospitals"
+        android:id="@+id/hospitals"
         />
     <item
         android:title="View Recipient Requests"

@@ -18,6 +18,9 @@
         <entry key="..\:/CllgProject/app/src/main/res/drawable/who_can_donate.xml" value="0.122" />
         <entry key="..\:/CllgProject/app/src/main/res/drawable/why_to_donate.xml" value="0.122" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/activity_add_request.xml" value="0.17552083333333332" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/activity_all_hospitals.xml" value="0.12666666666666668" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/activity_all_hospitals_donor.xml" value="0.14407866609662248" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/activity_all_hospitals_recipient.xml" value="0.14407866609662248" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/activity_description.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/activity_donors_home_page.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
@@ -37,6 +40,7 @@
         <entry key="..\:/CllgProject/app/src/main/res/layout/all_requests.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/app_bar.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/content.xml" value="0.1796875" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/content_view_requests.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/enter_hospital_location.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_about__u_s.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_about_us.xml" value="0.165625" />
@@ -61,12 +65,15 @@
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_second2.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_view_all_donors.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_view_all_recipient.xml" value="0.17552083333333332" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_view_donor_recipient.xml" value="0.14407866609662248" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_view_recipient_donor.xml" value="0.14407866609662248" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_where.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_where_page.xml" value="0.1" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_who.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_who_page.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_why.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/fragment_why_page.xml" value="0.1796875" />
+        <entry key="..\:/CllgProject/app/src/main/res/layout/hospital_names_recycler_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/navigation_header.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/layout/plasma_collection_recycler_layout.xml" value="0.1796875" />
         <entry key="..\:/CllgProject/app/src/main/res/menu/nav_menu_items.xml" value="0.1796875" />

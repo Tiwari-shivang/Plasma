@@ -25,7 +25,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mobile: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -33,8 +32,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/Mobile"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -46,7 +44,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Blood Group: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -54,8 +51,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/BloodGroup"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -67,7 +63,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Age: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -75,8 +70,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/Age"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -88,7 +82,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gender: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -96,8 +89,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/Gender"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -109,7 +101,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Address: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -117,8 +108,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/Address"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -130,7 +120,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BMI: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -138,8 +127,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/BMI"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -151,7 +139,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BMR: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -159,8 +146,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/BMR"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -172,7 +158,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Weight: "
-                    android:textSize="20sp"
                     android:textStyle="bold"
                     />
                 <TextView
@@ -180,10 +165,27 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/Weight"
                     android:layout_marginLeft="10dp"
-                    android:text="temp"
-                    android:textSize="20sp"/>
+                    android:text="temp" />
             </LinearLayout>
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hospitalLinear"
+                android:layout_below="@id/WeightLinear"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital: "
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hospitalFirebase"
+                    android:layout_marginLeft="10dp"
+                    android:text="temp" />
+            </LinearLayout>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

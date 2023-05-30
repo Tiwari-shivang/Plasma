@@ -12,6 +12,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.plasma.databinding.ActivityHospitalsLocationBinding;
 import com.google.firebase.database.DataSnapshot;
@@ -27,7 +28,7 @@ public class HospitalsLocation extends FragmentActivity implements OnMapReadyCal
 
     private GoogleMap mMap;
     private ActivityHospitalsLocationBinding binding;
-
+    private static LatLngBounds BOUNDS_INDIA = new LatLngBounds(new LatLng(23.63936, 68.14712), new LatLng(28.20453, 97.34466));
 
 
     @Override
@@ -60,9 +61,10 @@ public class HospitalsLocation extends FragmentActivity implements OnMapReadyCal
                     double longitude = Double.parseDouble(address.lon);
                     LatLng myLoc = new LatLng(latitude, longitude);
                     mMap.addMarker(new MarkerOptions().position(myLoc).title(address.name));
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLoc, 20.0f));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLoc,0.0f));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(myLoc));
                 }
+                mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(BOUNDS_INDIA,0));
             }
 
             @Override
@@ -70,6 +72,7 @@ public class HospitalsLocation extends FragmentActivity implements OnMapReadyCal
 
             }
         });
+
     }
 
 }
